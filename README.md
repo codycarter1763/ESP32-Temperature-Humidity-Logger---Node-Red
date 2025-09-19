@@ -4,9 +4,21 @@
 This is a build log on a modular data collection system that uses ESP32 microntrollers configured as a Modbus RTU server. This intergrates DHT11 temperature and humidity sensors with ESP32 edge devices for use on Node-RED for real-time data collection and visualization. The ESP32s function as low-cost PLC equivalents, transmitting telemetry data to SCADA systems for comprehensive monitoring, data logging, and automation.
 
 Meant for IoT, automation, and industrial applications, this configuration delivers PLC-like control and data acquisition at an accessible price point where affordable hardware meets enterprise-grade protocols.
+
 # Parts Used
+The hardware setup is very simple but allows for nearly unlimited data collection combinations depending on your need. 
+- ESP32
+- DHT11 Temperature/Humidity Sensor
 
 # ESP32 Modbus 
+Below is a custom firmware that sets up the ESP32 as a Modbus RTU server that collects temperature and humidity measurements from DHT11 sensors. Sensor data is stored into the ESP32's registers for use in Node-RED  
+
+## Required Libraries
+When running this firmware, install these libraries:
+- Adafruit's DHT Sensor Library
+- Adafruit Unified Sensor Library
+- Emelianov's modbus-esp8266 Library
+
 ```c++
 /******************************************
  * DHT11 Modbus Data Collection Arduino Code
