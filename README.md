@@ -42,8 +42,8 @@ When running this firmware, install these libraries:
 #include "DHT.h"
 
 // WiFi credentials
-const char* ssid = "Hot Singles In This Area";
-const char* password = "TheBabeCave69420";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 #define DHT11_PIN 15
 
