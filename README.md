@@ -11,7 +11,9 @@ The hardware setup is very simple but allows for nearly unlimited data collectio
 - DHT11 Temperature/Humidity Sensor
 
 # ESP32 Modbus 
-Below is a custom firmware that sets up the ESP32 as a Modbus RTU server that collects temperature and humidity measurements from DHT11 sensors. Sensor data is stored into the ESP32's registers for use in Node-RED  
+Below is a custom firmware that sets up the ESP32 as a Modbus RTU server that collects temperature and humidity measurements from DHT11 sensors. Sensor data is stored into the ESP32's registers for use in Node-RED.
+
+This setup can be done with openPLC, though creating your own Modbus firmware allows for more flexibility and sensor compatibility.
 
 ## Required Libraries
 When running this firmware, install these libraries:
@@ -98,7 +100,7 @@ void loop() {
 ```
 
 # Node-Red Dashboard
-
+Using Node-RED, real-time evaluation and data collection can be evaluated 
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/38f856f1-0acc-4f9c-884f-ccc60b1b1b46" width="48%" height="48%" alt="Left Image">
