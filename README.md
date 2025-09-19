@@ -6,6 +6,67 @@ This is a build log on a modular data collection system that uses ESP32 microntr
 # Parts Used
 
 # ESP32 Modbus 
+```c++
+#include <Arduino.h>
+#include <WiFi.h>
+#include <ModbusIP_ESP8266.h>
+#include "DHT.h"
+
+// WiFi credentials
+const char* ssid = "Hot Singles In This Area";
+const char* password = "TheBabeCave69420";
+
+#define DHT11_PIN 15
+DHT dht11(DHT11_PIN, DHT11);
+
+// Modbus instance
+ModbusIP mb;
+
+// Example register address
+const int REG_Humidity = 100;
+const int REG_Temperature_C = 101;
+const int REG_Temperature_F = 102;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Connect to WiFi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(200);
+    Serial.print(".");
+  }
+  Serial.println("\nWiFi connected, IP: " + WiFi.localIP().toString());
+
+  mb.server();  // This starts the server on port 502
+  Serial.println("Modbus TCP Server started on port 502");
+  
+  // Add a holding register with default value 0
+  mb.addHreg(REG_Humidity, 0);
+  mb.addHreg(REG_Temperature_C, 0);
+  mb.addHreg(REG_Temperature_F, 0);
+
+  dht11.begin();
+}
+
+void loop() {
+  // Handle incoming Modbus TCP requests
+  mb.task();
+
+  float humidity = dht11.readHumidity();
+  float temperature_C = dht11.readTemperature();
+  float temperature_F = dht11.readTemperature(true);
+
+  delay(2000);
+
+  Serial.printf("Temp: %.1f C, %.1f F  Humidity: %.1f %%\n", temperature_C, temperature_F, humidity);
+
+  // Update holding register 
+  mb.Hreg(REG_Humidity, (int)(humidity * 10));
+  mb.Hreg(REG_Temperature_C, (int)(temperature_C * 10));
+  mb.Hreg(REG_Temperature_F, (int)(temperature_F * 10));
+}
+```
 
 # Node-Red Dashboard
 
