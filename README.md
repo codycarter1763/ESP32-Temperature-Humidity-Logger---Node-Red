@@ -3,7 +3,7 @@
 <img width="1897" height="918" alt="Living Room Dash" src="https://github.com/user-attachments/assets/d5e9883d-21e6-4923-bfa5-79d0c9c27ab4" />
 
 # About
-This is a build log on a modular data collection system that uses ESP32 microntrollers configured as a Modbus RTU server. This intergrates DHT11 temperature and humidity sensors with ESP32 edge devices for use on Node-RED for real-time data collection and visualization. The ESP32s function as low-cost PLC equivalents, transmitting telemetry data to SCADA systems for comprehensive monitoring, data logging, and automation.
+This is a build log on a modular data collection system that uses ESP32 microtrollers configured as a Modbus RTU server. This intergrates DHT11 temperature and humidity sensors with ESP32 edge devices for use on Node-RED for real-time data collection and visualization. The ESP32s function as low-cost PLC equivalents, transmitting telemetry data to SCADA systems for comprehensive monitoring, data logging, and automation.
 
 Meant for IoT, automation, and industrial applications, this configuration delivers PLC-like control and data acquisition at an accessible price point where affordable hardware meets enterprise-grade protocols.
 
