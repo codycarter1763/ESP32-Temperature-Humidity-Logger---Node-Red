@@ -1,0 +1,1361 @@
+[
+    {
+        "id": "dd98ce947fa69b34",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "90fa47182bc24285",
+        "type": "modbus-client",
+        "name": "Temp/Humid Living Room",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.0.125",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": "4000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "b14153ecd6181630",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "bb14ff6090683212",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "b2c55bab7055462e",
+        "type": "ui-page",
+        "name": "Living Room Temperature and Humidity",
+        "ui": "b14153ecd6181630",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "bb14ff6090683212",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "5abab62e8da9f1a3",
+        "type": "ui-group",
+        "name": "Living Room Temperature and Humidity",
+        "page": "b2c55bab7055462e",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b4d5fb2eed089c3c",
+        "type": "ui-theme",
+        "name": "ui-base.label.theme 2",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "940ed628e9030393",
+        "type": "modbus-client",
+        "name": "Temp/Humid 3D Printer Room",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.0.157",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": "4000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "299ee032cde81a94",
+        "type": "ui-page",
+        "name": "3D Printer Room Temperature and Humidity",
+        "ui": "b14153ecd6181630",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "bb14ff6090683212",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7a185f10d25bbb84",
+        "type": "modbus-client",
+        "name": "Temp/Humid Outside",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.0.149",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": "4000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "6e0f9a5a71c99435",
+        "type": "ui-page",
+        "name": "Outside Temperature and Humidity",
+        "ui": "b14153ecd6181630",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "bb14ff6090683212",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8a3eb1446ca29ce9",
+        "type": "ui-group",
+        "name": "3D Printer Room Temperature and Humidity",
+        "page": "299ee032cde81a94",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d38ba31e86ddb05e",
+        "type": "ui-group",
+        "name": "Outside ",
+        "page": "6e0f9a5a71c99435",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "416ec030da0faf2a",
+        "type": "modbus-read",
+        "z": "dd98ce947fa69b34",
+        "name": "Living Room ",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "3",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "90fa47182bc24285",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "6e0f02ad04202e42"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6e0f02ad04202e42",
+        "type": "function",
+        "z": "dd98ce947fa69b34",
+        "name": "Scaled to Real",
+        "func": "var registers = msg.payload;\n\nvar Humid_Raw = registers[0];\nvar Temp_C_Raw = registers[1];\nvar Temp_F_Raw = registers[2];\n\n// Divide by 10 to get original measured values before int transform\nvar humid = Humid_Raw / 10;\nvar temp_C = Temp_C_Raw / 10;\nvar temp_F = Temp_F_Raw / 10;\n\nmsg.payload = {\n    humidity: parseFloat(humid.toFixed(1)),\n    temperature_C: parseFloat(temp_C.toFixed(1)),\n    temperature_F: parseFloat(temp_F.toFixed(1)),\n    timestamp: new Date().toISOString(),\n    time: new Date().toLocaleTimeString()\n}\n\nmsg.humidity = humid;\nmsg.tempC = temp_C;\nmsg.tempF = temp_F;\n\nvar now = new Date().getTime();  // Milliseconds for chart X-axis\n\nmsg.payload.humidity_chart = [[now, humid]];           // [timestamp, 52.3]\n\nmsg.payload.combined_chart = [\n    { series: [\"Temperature (°F)\"], data: [[now, temp_F]], labels: [\"\"] },\n    { series: [\"Temperature (°C)\"], data: [[now, temp_C]], labels: [\"\"] }\n];\n\n// Message 1: Celsius series\nvar msg1 = {};\nmsg1.topic = \"Celsius\";              // ← Series name (groups this line)\nmsg1.payload = temp_C;               // ← Y-value\nmsg1.timestamp = now;                // ← X-value (time)\n\n// Message 2: Fahrenheit series  \nvar msg2 = {};\nmsg2.topic = \"Fahrenheit\";           // ← Different series name\nmsg2.payload = temp_F;               // ← Y-value\nmsg2.timestamp = now;                // ← X-value (time)\n\n// Message 3: Humidity series  \nvar msg3 = {};\nmsg3.topic = \"Humidity\";           // ← Different series name\nmsg3.payload = humid;               // ← Y-value\nmsg3.timestamp = now;                // ← X-value (time)\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Connected: \" + temp_C.toFixed(1) + \"°C, \" + temp_F.toFixed(1) + \"°F, \" + humid.toFixed(1) + \"%\"\n});\n\nreturn [msg1, msg2, msg3];\n\n\n\nreturn msg;",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "\n",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "8af50818a88b1264",
+                "560b1fc1f6c25e36"
+            ],
+            [
+                "8af50818a88b1264",
+                "6337e55fd0c6f895"
+            ],
+            [
+                "440971c76cd502b3",
+                "9bf41cea7e67dba4"
+            ]
+        ]
+    },
+    {
+        "id": "440971c76cd502b3",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "5abab62e8da9f1a3",
+        "name": "Humidity",
+        "label": "Humidity",
+        "order": 5,
+        "chartType": "line",
+        "category": "Humidity (%)",
+        "categoryType": "str",
+        "xAxisLabel": "Time ",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Humidity (%)",
+        "yAxisProperty": "humidity",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#d400ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 900,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8af50818a88b1264",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "5abab62e8da9f1a3",
+        "name": "Temperature ",
+        "label": "Temperature °F and °C",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature (°F and °C)",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "120",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 910,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ad41b0fcaaa0234",
+        "type": "modbus-read",
+        "z": "dd98ce947fa69b34",
+        "name": "3D Printer Room",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "3",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "940ed628e9030393",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "05c8cc38df121e6b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "05c8cc38df121e6b",
+        "type": "function",
+        "z": "dd98ce947fa69b34",
+        "name": "Scaled to Real",
+        "func": "var registers = msg.payload;\n\nvar Humid_Raw = registers[0];\nvar Temp_C_Raw = registers[1];\nvar Temp_F_Raw = registers[2];\n\n// Divide by 10 to get original measured values before int transform\nvar humid = Humid_Raw / 10;\nvar temp_C = Temp_C_Raw / 10;\nvar temp_F = Temp_F_Raw / 10;\n\nmsg.payload = {\n    humidity: parseFloat(humid.toFixed(1)),\n    temperature_C: parseFloat(temp_C.toFixed(1)),\n    temperature_F: parseFloat(temp_F.toFixed(1)),\n    timestamp: new Date().toISOString(),\n    time: new Date().toLocaleTimeString()\n}\n\nmsg.humidity = humid;\nmsg.tempC = temp_C;\nmsg.tempF = temp_F;\n\nvar now = new Date().getTime();  // Milliseconds for chart X-axis\n\nmsg.payload.humidity_chart = [[now, humid]];           // [timestamp, 52.3]\n\nmsg.payload.combined_chart = [\n    { series: [\"Temperature (°F)\"], data: [[now, temp_F]], labels: [\"\"] },\n    { series: [\"Temperature (°C)\"], data: [[now, temp_C]], labels: [\"\"] }\n];\n\n// Message 1: Celsius series\nvar msg1 = {};\nmsg1.topic = \"Celsius\";              // ← Series name (groups this line)\nmsg1.payload = temp_C;               // ← Y-value\nmsg1.timestamp = now;                // ← X-value (time)\n\n// Message 2: Fahrenheit series  \nvar msg2 = {};\nmsg2.topic = \"Fahrenheit\";           // ← Different series name\nmsg2.payload = temp_F;               // ← Y-value\nmsg2.timestamp = now;                // ← X-value (time)\n\n// Message 3: Humidity series  \nvar msg3 = {};\nmsg3.topic = \"Humidity\";           // ← Different series name\nmsg3.payload = humid;               // ← Y-value\nmsg3.timestamp = now;                // ← X-value (time)\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Connected: \" + temp_C.toFixed(1) + \"°C, \" + temp_F.toFixed(1) + \"°F, \" + humid.toFixed(1) + \"%\"\n});\n\nreturn [msg1, msg2, msg3];\n\n\n\nreturn msg;",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "\n",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 600,
+        "wires": [
+            [
+                "6bd6e09da3fac293",
+                "124c80fe82f110fc"
+            ],
+            [
+                "6bd6e09da3fac293",
+                "3a1b733dbe2fe4eb"
+            ],
+            [
+                "b96210a61745ec8c",
+                "e14e4a7284ec2180"
+            ]
+        ]
+    },
+    {
+        "id": "6bd6e09da3fac293",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "8a3eb1446ca29ce9",
+        "name": "Temperature ",
+        "label": "Temperature °F and °C",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature (°F and °C)",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "120",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 910,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b96210a61745ec8c",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "8a3eb1446ca29ce9",
+        "name": "Humidity",
+        "label": "Humidity",
+        "order": 5,
+        "chartType": "line",
+        "category": "Humidity (%)",
+        "categoryType": "str",
+        "xAxisLabel": "Time ",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Humidity (%)",
+        "yAxisProperty": "humidity",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#d400ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 900,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c2b1973c0aa2352",
+        "type": "function",
+        "z": "dd98ce947fa69b34",
+        "name": "Scaled to Real",
+        "func": "var registers = msg.payload;\n\nvar Humid_Raw = registers[0];\nvar Temp_C_Raw = registers[1];\nvar Temp_F_Raw = registers[2];\n\n// Divide by 10 to get original measured values before int transform\nvar humid = Humid_Raw / 10;\nvar temp_C = Temp_C_Raw / 10;\nvar temp_F = Temp_F_Raw / 10;\n\nmsg.payload = {\n    humidity: parseFloat(humid.toFixed(1)),\n    temperature_C: parseFloat(temp_C.toFixed(1)),\n    temperature_F: parseFloat(temp_F.toFixed(1)),\n    timestamp: new Date().toISOString(),\n    time: new Date().toLocaleTimeString()\n}\n\nmsg.humidity = humid;\nmsg.tempC = temp_C;\nmsg.tempF = temp_F;\n\nvar now = new Date().getTime();  // Milliseconds for chart X-axis\n\nmsg.payload.humidity_chart = [[now, humid]];           // [timestamp, 52.3]\n\nmsg.payload.combined_chart = [\n    { series: [\"Temperature (°F)\"], data: [[now, temp_F]], labels: [\"\"] },\n    { series: [\"Temperature (°C)\"], data: [[now, temp_C]], labels: [\"\"] }\n];\n\n// Message 1: Celsius series\nvar msg1 = {};\nmsg1.topic = \"Celsius\";              // ← Series name (groups this line)\nmsg1.payload = temp_C;               // ← Y-value\nmsg1.timestamp = now;                // ← X-value (time)\n\n// Message 2: Fahrenheit series  \nvar msg2 = {};\nmsg2.topic = \"Fahrenheit\";           // ← Different series name\nmsg2.payload = temp_F;               // ← Y-value\nmsg2.timestamp = now;                // ← X-value (time)\n\n// Message 3: Humidity series  \nvar msg3 = {};\nmsg3.topic = \"Humidity\";           // ← Different series name\nmsg3.payload = humid;               // ← Y-value\nmsg3.timestamp = now;                // ← X-value (time)\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Connected: \" + temp_C.toFixed(1) + \"°C, \" + temp_F.toFixed(1) + \"°F, \" + humid.toFixed(1) + \"%\"\n});\n\nreturn [msg1, msg2, msg3];\n\n\n\nreturn msg;",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "\n",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 940,
+        "wires": [
+            [
+                "e94003de47601327",
+                "5bf6c503bc627a86"
+            ],
+            [
+                "e94003de47601327",
+                "5b90ce70dbe0e148"
+            ],
+            [
+                "35c4f4494031b8ca",
+                "9136af7522d46ae6"
+            ]
+        ]
+    },
+    {
+        "id": "47b6fe407ff6f688",
+        "type": "modbus-read",
+        "z": "dd98ce947fa69b34",
+        "name": "Outside",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "3",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "7a185f10d25bbb84",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 310,
+        "y": 960,
+        "wires": [
+            [
+                "4c2b1973c0aa2352"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e94003de47601327",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "d38ba31e86ddb05e",
+        "name": "Temperature ",
+        "label": "Temperature °F and °C",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature (°F and °C)",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "120",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 910,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35c4f4494031b8ca",
+        "type": "ui-chart",
+        "z": "dd98ce947fa69b34",
+        "group": "d38ba31e86ddb05e",
+        "name": "Humidity",
+        "label": "Humidity",
+        "order": 5,
+        "chartType": "line",
+        "category": "Humidity (%)",
+        "categoryType": "str",
+        "xAxisLabel": "Time ",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}:{ss}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Humidity (%)",
+        "yAxisProperty": "humidity",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#d400ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 900,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bf41cea7e67dba4",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "Humidity",
+        "group": "5abab62e8da9f1a3",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6337e55fd0c6f895",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "F°",
+        "group": "5abab62e8da9f1a3",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "F°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "560b1fc1f6c25e36",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "C°",
+        "group": "5abab62e8da9f1a3",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "C°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e14e4a7284ec2180",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "Humidity",
+        "group": "8a3eb1446ca29ce9",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a1b733dbe2fe4eb",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "F°",
+        "group": "8a3eb1446ca29ce9",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "F°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "124c80fe82f110fc",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "C°",
+        "group": "8a3eb1446ca29ce9",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "C°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9136af7522d46ae6",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "Humidity",
+        "group": "d38ba31e86ddb05e",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b90ce70dbe0e148",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "F°",
+        "group": "d38ba31e86ddb05e",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "F°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5bf6c503bc627a86",
+        "type": "ui-gauge",
+        "z": "dd98ce947fa69b34",
+        "name": "C°",
+        "group": "d38ba31e86ddb05e",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "C°",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02b9c366f734406f",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-modbus": "5.44.1",
+            "@flowfuse/node-red-dashboard": "1.27.1"
+        }
+    }
+]
